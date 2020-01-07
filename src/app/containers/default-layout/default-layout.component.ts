@@ -8,6 +8,11 @@ import { navItems } from '../../_nav';
 export class DefaultLayoutComponent {
   public sidebarMinimized = false;
   public navItems = navItems;
+  year: number = new Date().getFullYear();
+
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
 
   toggleMinimize(e) {
     this.sidebarMinimized = e;

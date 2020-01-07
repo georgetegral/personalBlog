@@ -12,7 +12,7 @@ import { RegisterComponent } from './views/register/register.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
@@ -50,6 +50,10 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
+      {
+        path: 'home',
+        loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule)
+      },
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
