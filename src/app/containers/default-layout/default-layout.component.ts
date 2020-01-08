@@ -10,6 +10,13 @@ export class DefaultLayoutComponent {
   public navItems = navItems;
   year: number = new Date().getFullYear();
 
+  form:any = {};
+
+  sendForm(){
+    alert('Message sent correctly');
+    this.form = {}
+  }
+
   goToLink(url: string){
     window.open(url, "_blank");
   }

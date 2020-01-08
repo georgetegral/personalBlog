@@ -1,8 +1,8 @@
 <app-header
   [navbarBrandRouterLink]="['/home']"
   [fixed]="true"
-  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
-  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 150, height: 50, alt: 'georgetegral Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'georgetegral Logo'}"
   [sidebarToggler]="'lg'"
   [asideMenuToggler]="'lg'">
   <ul class="nav navbar-nav ml-auto">
@@ -59,13 +59,13 @@
         <div class="list-group list-group-accent">
           <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">Contact</div>
           <div class="card-body">
-            <form action="" method="post">
+            
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                   </div>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Name">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
                 </div>
               </div>
               <div class="form-group">
@@ -73,15 +73,15 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                   </div>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" autocomplete="email">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" autocomplete="email" />
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><h5>S</h5></span>
+                    <span class="input-group-text"><b>S</b></span>
                   </div>
-                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
                 </div>
               </div>
               <div class="form-group">
@@ -93,10 +93,9 @@
                 </div>
               </div>
               <div class="form-group form-actions">
-                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o" (click)="sendForm()"></i> Submit</button>
               </div>
-            </form>
+            
           </div>
 
         </div>

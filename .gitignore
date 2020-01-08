@@ -3,6 +3,8 @@
 #Api keys
 /src/environments/firebaseConfig.ts
 
+#Firebase
+/.firebase
 
 # compiled output
 /dist
