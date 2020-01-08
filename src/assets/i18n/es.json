@@ -1,6 +1,6 @@
 {
     "onInit": {
-        "langTitle": "Elije tu lenguaje",
+        "langTitle": "Elije tu idioma",
         "langText": "Lo puedes cambiar después en el menú de la esquina superior derecha.",
         "langEN": "Inglés",
         "langES": "Español"
@@ -22,7 +22,7 @@
         "messageAlertTitle": "¡Éxito!",
         "messageAlertText": "Mensaje enviado correctamente",
         "settings": "Configuración",
-        "language": "Lenguaje"
+        "language": "Idioma"
     },
     "footer": {
         "message": "Con amor desde"
