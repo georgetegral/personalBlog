@@ -1,0 +1,23 @@
+{
+    "asidebar": {
+        "socialNetworks": "Mis redes sociales",
+        "contact": "Contacto",
+        "contactText": "¡Mándame un mensaje y me pondré en contacto contigo lo más pronto posible!",
+        "namePlaceHolder": "Tu nombre o empresa",
+        "nameError": "Nombre no válido.",
+        "emailPlaceHolder": "Tu email",
+        "emailError": "Email no válido.",
+        "subjectPlaceHolder": "Asunto",
+        "subjectError": "Asunto no válido.",
+        "subjectPrepend": "A",
+        "messagePlaceHolder": "Mensaje",
+        "messageError": "Mensaje no válido.",
+        "sendMessage": "Mandar Mensaje",
+        "messageAlert": "Mensaje enviado correctamente",
+        "settings": "Configuración",
+        "language": "Lenguaje"
+    },
+    "footer": {
+        "message": "Con amor desde "
+    }
+}

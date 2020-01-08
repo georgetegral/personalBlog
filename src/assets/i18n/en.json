@@ -1,0 +1,23 @@
+{
+    "asidebar": {
+        "socialNetworks": "My Social Networks",
+        "contact": "Contact",
+        "contactText": "Hit me up with a message and I'll get in touch with you as soon as posible!",
+        "namePlaceHolder": "Your name or company",
+        "nameError": "Name not valid.",
+        "emailPlaceHolder": "Your email",
+        "emailError": "Email not valid.",
+        "subjectPlaceHolder": "Subject",
+        "subjectError": "Subject not valid.",
+        "subjectPrepend": "S",
+        "messagePlaceHolder": "Message",
+        "messageError": "Message not valid.",
+        "sendMessage": "Send Message",
+        "messageAlert": "Message sent successfully",
+        "settings": "Settings",
+        "language": "Language"
+    },
+    "footer": {
+        "message": "With love from "
+    }
+}

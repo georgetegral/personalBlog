@@ -27,7 +27,7 @@
       <tab>
         <ng-template tabHeading><i class="fa fa-users fa-lg"></i></ng-template>
         <div class="list-group list-group-accent">
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">My Social Networks</div>
+          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.socialNetworks' | translate }}</div>
           <a href="//github.com/georgetegral" target="_blank" style="color:black;text-decoration: none;background-color: none; text-align: center;">
             <div class="list-group-item list-group-item-divider">
               <p><i class="fa fa-github fa-lg"></i> Github</p>
@@ -59,45 +59,45 @@
       <tab>
         <ng-template tabHeading><i class="fa fa-envelope fa-lg"></i></ng-template>
         <div class="list-group list-group-accent">
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">Contact</div>
+          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.contact' | translate }}</div>
           
           <form name="contactForm">
             <div class="card-body">
-              <label class="form-col-form-label" for="inputSuccess1">Hit me up with a message and I'll get in touch with you as soon as posible!</label>
+              <label class="form-col-form-label" for="inputSuccess1">{{ 'asidebar.contactText' | translate }}</label>
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div>
-                  <input [formControl]="nameF" type="text" id="name" name="name" placeholder="Your name or company" class="form-control" required>
+                  <input [formControl]="nameF" type="text" id="name" name="name" placeholder="{{ 'asidebar.namePlaceHolder' | translate }}" class="form-control" required>
                 </div>
-                <small style="color:red; text-align:center;" *ngIf="nameF.invalid && nameF.touched">Name not valid.</small>
+                <small style="color:red; text-align:center;" *ngIf="nameF.invalid && nameF.touched">{{ 'asidebar.nameError' | translate }}</small>
               </div>
 
               <div class="form-group" >
                 <div class="input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
-                  <input [formControl]="mailF" type="email" id="email" name="email" placeholder="Your email" class="form-control" required>
+                  <input [formControl]="mailF" type="email" id="email" name="email" placeholder="{{ 'asidebar.emailPlaceHolder' | translate }}" class="form-control" required>
                 </div>
-                <small style="color:red; text-align:center;" *ngIf="mailF.invalid && mailF.touched">Email not valid.</small>
+                <small style="color:red; text-align:center;" *ngIf="mailF.invalid && mailF.touched">{{ 'asidebar.emailError' | translate }}</small>
               </div>
 
               <div class="form-group">
                 <div class="input-group">
-                  <div class="input-group-prepend"><span class="input-group-text"><b>S</b></span></div>
-                  <input [formControl]="subjF" type="text" id="subject" name="subject" placeholder="Subject" class="form-control" required/>
+                  <div class="input-group-prepend"><span class="input-group-text"><b>{{ 'asidebar.subjectPrepend' | translate }}</b></span></div>
+                  <input [formControl]="subjF" type="text" id="subject" name="subject" placeholder="{{ 'asidebar.subjectPlaceHolder' | translate }}" class="form-control" required/>
                 </div>
-                <small style="color:red; text-align:center;" *ngIf="subjF.invalid && subjF.touched">Subject not valid.</small>
+                <small style="color:red; text-align:center;" *ngIf="subjF.invalid && subjF.touched">{{ 'asidebar.subjectError' | translate }}</small>
               </div>
 
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-paragraph"></i></span></div>
-                  <textarea [formControl]="messF" id="textarea-input" name="textarea-input" rows="5" placeholder="Message" class="form-control" required></textarea>
+                  <textarea [formControl]="messF" id="textarea-input" name="textarea-input" rows="5" placeholder="{{ 'asidebar.messagePlaceHolder' | translate }}" class="form-control" required></textarea>
                 </div>
-                <small style="color:red; text-align:center;" *ngIf="messF.invalid && messF.touched">Message not valid.</small>
+                <small style="color:red; text-align:center;" *ngIf="messF.invalid && messF.touched">{{ 'asidebar.messageError' | translate }}</small>
               </div>
 
-              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">Send Message</button>
-              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>Send Message</button>
+              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">{{ 'asidebar.sendMessage' | translate }}</button>
+              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>{{ 'asidebar.sendMessage' | translate }}</button>
               <br><br><br>
             </div>
           </form>
@@ -106,10 +106,10 @@
       <tab>
         <ng-template tabHeading><i class="fa fa-cog fa-lg"></i></ng-template>
         <div class="list-group list-group-accent">
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">Settings</div>
+          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.settings' | translate }}</div>
           <div class="aside-options">
             <small><b>&nbsp;Dark Mode</b></small>
-            <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+            <label class="switch switch-label switch-pill switch-primary switch-sm float-right">
               <input type="checkbox" class="switch-input">
               <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
             </label>
@@ -117,13 +117,13 @@
               <small class="text-muted">&nbsp;Enable this for a dark user interface.</small>
             </div>
           </div>
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">Language</div>
+          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.language' | translate }}</div>
 
           <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="lang-en" data-toggle="list" role="tab" aria-controls="en">
+            <a class="list-group-item list-group-item-action" id="lang-en" data-toggle="list" role="tab" aria-controls="en" (click)="useLanguage('en')">
               <i class="flag-icon flag-icon-us" title="us" id="us"></i>EN
             </a>
-            <a class="list-group-item list-group-item-action" id="lang-es" data-toggle="list" role="tab" aria-controls="es">
+            <a class="list-group-item list-group-item-action" id="lang-es" data-toggle="list" role="tab" aria-controls="es" (click)="useLanguage('es')">
               <i class="flag-icon flag-icon-mx" title="mx" id="mx"></i>ES
             </a>
             <br><br><br>
@@ -138,5 +138,5 @@
 
 <app-footer>
   <span>Jorge García - {{year}}</span>
-  <span class="ml-auto"> With love from <i class="flag-icon flag-icon-mx" title="mx" id="mx"></i></span>
+  <span class="ml-auto">{{ 'footer.message' | translate }}<i class="flag-icon flag-icon-mx" title="mx" id="mx"></i></span>
 </app-footer>

@@ -2,6 +2,8 @@ import {Component } from '@angular/core';
 import { navItems } from '../../_nav';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FormControl, Validators } from '@angular/forms';
+import { AppComponent } from '../../app.component';
+import {ModalDirective} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +19,7 @@ export class DefaultLayoutComponent {
   subjF: FormControl;
   messF: FormControl;
 
-  constructor(private afDB: AngularFireDatabase){
+  constructor(private afDB: AngularFireDatabase, private appComponent: AppComponent){
     this.nameF = new FormControl('',[Validators.required]);
     /*
     this.nameF.valueChanges
@@ -39,11 +41,15 @@ export class DefaultLayoutComponent {
     this.afDB.database.ref('messages/'+id+'/email').set(this.mailF.value);
     this.afDB.database.ref('messages/'+id+'/subject').set(this.subjF.value);
     this.afDB.database.ref('messages/'+id+'/message').set(this.messF.value);
-    alert('Message sent correctly');
+    alert('Message sent successfully');
     this.nameF.setValue("");  this.nameF.reset();
     this.mailF.setValue("");  this.mailF.reset();
     this.subjF.setValue("");  this.subjF.reset();
     this.messF.setValue("");  this.messF.reset();
+  }
+
+  useLanguage(language: string) {
+    this.appComponent.useLanguage(language)
   }
 
   goToLink(url: string){
