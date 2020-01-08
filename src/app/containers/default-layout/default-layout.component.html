@@ -9,6 +9,7 @@
     <li class="nav-item d-md-down-none"></li>
   </ul>
 </app-header>
+
 <div class="app-body">
   <app-sidebar #appSidebar [fixed]="true" [display]="'lg'" [minimized]="sidebarMinimized" (minimizedChange)="toggleMinimize($event)">
     <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
@@ -21,7 +22,7 @@
     </div><!-- /.container-fluid -->
   </main>
 
-  <app-aside [fixed]="true" [display]="false" [ngClass]="'test'">
+  <app-aside [fixed]="true" [display]="'lg'">
     <tabset>
       <tab>
         <ng-template tabHeading><i class="fa fa-users fa-lg"></i></ng-template>
@@ -65,7 +66,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div>
-                  <input [formControl]="nameF" type="text" id="name" name="name" placeholder="Name" class="form-control" required>
+                  <input [formControl]="nameF" type="text" id="name" name="name" placeholder="Your name or company" class="form-control" required>
                 </div>
                 <small style="color:red; text-align:center;" *ngIf="nameF.invalid && nameF.touched">Name not valid.</small>
               </div>
@@ -73,7 +74,7 @@
               <div class="form-group" >
                 <div class="input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
-                  <input [formControl]="mailF" type="email" id="email" name="email" placeholder="Email" class="form-control" required>
+                  <input [formControl]="mailF" type="email" id="email" name="email" placeholder="Your email" class="form-control" required>
                 </div>
                 <small style="color:red; text-align:center;" *ngIf="mailF.invalid && mailF.touched">Email not valid.</small>
               </div>
