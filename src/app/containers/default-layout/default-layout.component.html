@@ -58,46 +58,45 @@
         <ng-template tabHeading><i class="fa fa-envelope fa-lg"></i></ng-template>
         <div class="list-group list-group-accent">
           <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">Contact</div>
-          <div class="card-body">
-            
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-user"></i></span>
-                  </div>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                  </div>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" autocomplete="email" />
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><b>S</b></span>
-                  </div>
-                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" />
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-paragraph"></i></span>
-                  </div>
-                  <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Message"></textarea>
-                </div>
-              </div>
-              <div class="form-group form-actions">
-                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o" (click)="sendForm()"></i> Submit</button>
-              </div>
-            
-          </div>
+          <form name="contactForm">
+            <div class="card-body">
 
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div>
+                  <input [formControl]="nameF" type="text" id="name" name="name" placeholder="Name" class="form-control" required>
+                </div>
+                <small style="color:red; text-align:center;" *ngIf="nameF.invalid && nameF.touched">Name not valid.</small>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-group">
+                  <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                  <input [formControl]="mailF" type="email" id="email" name="email" placeholder="Email" class="form-control" required>
+                </div>
+                <small style="color:red; text-align:center;" *ngIf="mailF.invalid && mailF.touched">Email not valid.</small>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend"><span class="input-group-text"><b>S</b></span></div>
+                  <input [formControl]="subjF" type="text" id="subject" name="subject" placeholder="Subject" class="form-control" required/>
+                </div>
+                <small style="color:red; text-align:center;" *ngIf="subjF.invalid && subjF.touched">Subject not valid.</small>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-paragraph"></i></span></div>
+                  <textarea [formControl]="messF" id="textarea-input" name="textarea-input" rows="5" placeholder="Message" class="form-control" required></textarea>
+                </div>
+                <small style="color:red; text-align:center;" *ngIf="messF.invalid && messF.touched">Message not valid.</small>
+              </div>
+
+              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">Send Message</button>
+              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>Send Message</button>
+            </div>
+          </form>
         </div>
       </tab>
       <tab>
