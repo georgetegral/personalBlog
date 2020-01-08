@@ -98,7 +98,6 @@
 
               <button class="btn btn-sm btn-primary" (click)="sendForm(template)" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">{{ 'asidebar.sendMessage' | translate }}</button>
               <button class="btn btn-sm btn-primary" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>{{ 'asidebar.sendMessage' | translate }}</button>
-              <button class="btn btn-sm btn-primary" (click)="showLangModal()" >{{ 'asidebar.sendMessage' | translate }}</button>
               <br><br><br>
             </div>
           </form>
