@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   // tslint:disable-next-line
@@ -12,7 +13,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 export class AppComponent implements OnInit {
   modalRef: BsModalRef;
 
-  constructor(private router: Router, private translate: TranslateService, private modalService: BsModalService) { 
+  constructor(private router: Router, private translate: TranslateService, private modalService: BsModalService, private cookieService: CookieService) { 
     translate.setDefaultLang('en');
   }
 
@@ -29,6 +30,14 @@ export class AppComponent implements OnInit {
 
   useLanguage(language: string) {
     this.translate.use(language);
+  }
+
+  setCookie(cName, cValue){
+    this.cookieService.set(cName,cValue);
+  }
+
+  getCookie(cName){
+    return this.cookieService.get(cName);
   }
 
   ngOnInit() {

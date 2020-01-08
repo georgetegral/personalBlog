@@ -1,4 +1,10 @@
 {
+    "onInit": {
+        "langTitle": "Choose your language",
+        "langText": "You can change it afterwards in the upper right corner menu.",
+        "langEN": "English",
+        "langES": "Spanish"
+    },
     "asidebar": {
         "socialNetworks": "My Social Networks",
         "contact": "Contact",

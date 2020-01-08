@@ -1,9 +1,9 @@
-import {Component, TemplateRef } from '@angular/core';
+import {Component, TemplateRef, ViewChild } from '@angular/core';
 import { navItems } from '../../_nav';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FormControl, Validators } from '@angular/forms';
 import { AppComponent } from '../../app.component';
-import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class DefaultLayoutComponent {
   public navItems = navItems;
   year: number = new Date().getFullYear();
   modalRef: BsModalRef;
+  @ViewChild('langInit') langInit: TemplateRef<any>;
 
   nameF: FormControl;
   mailF: FormControl;
@@ -37,6 +38,14 @@ export class DefaultLayoutComponent {
     this.messF = new FormControl('',[Validators.required]);
   }
 
+  ngAfterViewInit() {
+    if(!this.getCookie('language')){
+      //Mostrar modal
+      setTimeout(() => {this.openModal(this.langInit)}, 1000);
+      console.log("Cookie does not exist.")
+    } 
+  }
+
   sendForm(template: TemplateRef<any>){
     var id = Date.now();
     this.afDB.database.ref('messages/'+id+'/name').set(this.nameF.value);
@@ -55,11 +64,21 @@ export class DefaultLayoutComponent {
   }
 
   useLanguage(language: string) {
-    this.appComponent.useLanguage(language)
+    this.appComponent.useLanguage(language);
+    this.setCookie('language',language);
   }
 
   getLanguage(){
     return this.appComponent.getLanguage();
+  }
+
+  setCookie(cName, cValue){
+    this.appComponent.setCookie(cName, cValue);
+    console.log("language cookie set to: ",cValue)
+  }
+
+  getCookie(cName){
+    return this.appComponent.getCookie(cName);
   }
 
   goToLink(url: string){
