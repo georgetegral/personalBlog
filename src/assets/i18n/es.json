@@ -13,11 +13,12 @@
         "messagePlaceHolder": "Mensaje",
         "messageError": "Mensaje no válido.",
         "sendMessage": "Mandar Mensaje",
-        "messageAlert": "Mensaje enviado correctamente",
+        "messageAlertTitle": "¡Éxito!",
+        "messageAlertText": "Mensaje enviado correctamente",
         "settings": "Configuración",
         "language": "Lenguaje"
     },
     "footer": {
-        "message": "Con amor desde "
+        "message": "Con amor desde"
     }
 }

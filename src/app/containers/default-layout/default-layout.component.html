@@ -96,8 +96,8 @@
                 <small style="color:red; text-align:center;" *ngIf="messF.invalid && messF.touched">{{ 'asidebar.messageError' | translate }}</small>
               </div>
 
-              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">{{ 'asidebar.sendMessage' | translate }}</button>
-              <button class="btn btn-sm btn-primary" (click)="sendForm()" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>{{ 'asidebar.sendMessage' | translate }}</button>
+              <button class="btn btn-sm btn-primary" (click)="sendForm(template)" *ngIf="nameF.valid && mailF.valid && subjF.valid && messF.valid">{{ 'asidebar.sendMessage' | translate }}</button>
+              <button class="btn btn-sm btn-primary" *ngIf="nameF.invalid || mailF.invalid || subjF.invalid || messF.invalid" disabled>{{ 'asidebar.sendMessage' | translate }}</button>
               <br><br><br>
             </div>
           </form>
@@ -106,26 +106,22 @@
       <tab>
         <ng-template tabHeading><i class="fa fa-cog fa-lg"></i></ng-template>
         <div class="list-group list-group-accent">
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.settings' | translate }}</div>
-          <div class="aside-options">
-            <small><b>&nbsp;Dark Mode</b></small>
-            <label class="switch switch-label switch-pill switch-primary switch-sm float-right">
-              <input type="checkbox" class="switch-input">
-              <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
-            </label>
-            <div>
-              <small class="text-muted">&nbsp;Enable this for a dark user interface.</small>
-            </div>
-          </div>
           <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.language' | translate }}</div>
-
           <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action" id="lang-en" data-toggle="list" role="tab" aria-controls="en" (click)="useLanguage('en')">
+            <a *ngIf="getLanguage()!='en'" class="list-group-item list-group-item-action" id="lang-en" data-toggle="list" role="tab" aria-controls="en" (click)="useLanguage('en')">
               <i class="flag-icon flag-icon-us" title="us" id="us"></i>EN
             </a>
-            <a class="list-group-item list-group-item-action" id="lang-es" data-toggle="list" role="tab" aria-controls="es" (click)="useLanguage('es')">
+            <a *ngIf="getLanguage()=='en'" class="list-group-item list-group-item-action active" id="lang-en" data-toggle="list" role="tab" aria-controls="en" (click)="useLanguage('en')">
+              <i class="flag-icon flag-icon-us" title="us" id="us"></i>EN
+            </a>
+            
+            <a *ngIf="getLanguage()!='es'" class="list-group-item list-group-item-action" id="lang-es" data-toggle="list" role="tab" aria-controls="es" (click)="useLanguage('es')">
               <i class="flag-icon flag-icon-mx" title="mx" id="mx"></i>ES
             </a>
+            <a *ngIf="getLanguage()=='es'" class="list-group-item list-group-item-action active" id="lang-es" data-toggle="list" role="tab" aria-controls="es" (click)="useLanguage('es')">
+              <i class="flag-icon flag-icon-mx" title="mx" id="mx"></i>ES
+            </a>
+
             <br><br><br>
           </div>
 
@@ -136,7 +132,22 @@
   
 </div>
 
+<ng-template #template>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">{{ 'asidebar.messageAlertTitle' | translate }}</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+    {{ 'asidebar.messageAlertText' | translate }}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Ok</button>
+  </div>
+</ng-template>
+
 <app-footer>
   <span>Jorge García - {{year}}</span>
-  <span class="ml-auto">{{ 'footer.message' | translate }}<i class="flag-icon flag-icon-mx" title="mx" id="mx"></i></span>
+  <span class="ml-auto">{{ 'footer.message' | translate }} <i class="flag-icon flag-icon-mx" title="mx" id="mx"></i></span>
 </app-footer>

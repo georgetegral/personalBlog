@@ -52,6 +52,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { ModalModule, BsModalRef } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
@@ -81,7 +82,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+    }),
+    ModalModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -93,8 +95,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   ],
   providers: [{
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+    useClass: HashLocationStrategy,
+    
+  },BsModalRef
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
