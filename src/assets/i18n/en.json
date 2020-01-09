@@ -5,9 +5,6 @@
         "langEN": "English",
         "langES": "Spanish"
     },
-    "sidebar": {
-        "home": "Home"
-    },
     "asidebar": {
         "socialNetworks": "My Social Networks",
         "contact": "Contact",
@@ -29,5 +26,22 @@
     },
     "footer": {
         "message": "With love from"
+    },
+    "home": {
+        "aboutMeHeader": "About me",
+        "aboutMeTitle": "Who am I?",
+        "aboutMeText": "About me text",
+        "cvTitle": "My Curriculum Vitae",
+        "cvText": "link",
+        "projectsHeader": "Some of my projects"
+    },
+    "blog": {
+
+    },
+    "braintegral": {
+        "brainHeader": "The definitive platform for addiction recovery is coming.",
+        "brainTitle": "What is Braintegral?",
+        "brainDescription": "Braintegral is a platform that focuses in addiction recovery.",
+        "brainFooter": "Join the waiting list to recive updates about the future launch."
     }
 }

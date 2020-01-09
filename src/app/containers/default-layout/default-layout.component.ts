@@ -1,9 +1,9 @@
-import {Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { navItems } from '../../_nav';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FormControl, Validators } from '@angular/forms';
 import { AppComponent } from '../../app.component';
-import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({

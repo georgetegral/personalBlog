@@ -7,6 +7,16 @@ export const navItems: INavData[] = [
     icon: 'icon-home'
   },
   {
+    name: 'Blog',
+    url: '/blog',
+    icon: 'cui-bold'
+  },
+  {
+    name: 'Braintegral',
+    url: '/braintegral',
+    icon: 'icon-star'
+  },
+  {
     title: true,
     name: 'Theme'
   },
