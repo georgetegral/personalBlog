@@ -5,6 +5,9 @@
         "langEN": "Inglés",
         "langES": "Español"
     },
+    "sidebar": {
+        "home": "Pantalla principal"
+    },
     "asidebar": {
         "socialNetworks": "Mis redes sociales",
         "contact": "Contacto",

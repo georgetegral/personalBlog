@@ -5,6 +5,9 @@
         "langEN": "English",
         "langES": "Spanish"
     },
+    "sidebar": {
+        "home": "Home"
+    },
     "asidebar": {
         "socialNetworks": "My Social Networks",
         "contact": "Contact",
