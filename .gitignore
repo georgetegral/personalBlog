@@ -5,6 +5,7 @@
 
 #Firebase
 /.firebase
+/*.log
 
 # compiled output
 /dist

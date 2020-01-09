@@ -42,7 +42,8 @@ export class DefaultLayoutComponent {
     if(!this.getCookie('language')){
       //Mostrar modal
       setTimeout(() => {this.openModal(this.langInit)}, 1000);
-      console.log("Cookie does not exist.")
+      console.log("Cookie does not exist.");
+      this.setCookie('language','en');
     } else {
       console.log("Changed translate value to cookie value");
       this.useLanguage(this.getCookie('language'));
