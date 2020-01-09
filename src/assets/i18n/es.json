@@ -31,7 +31,7 @@
         "aboutMeHeader": "Sobre mí",
         "aboutMeTitle": "¿Quién soy yo?",
         "aboutMeText": "Sobre mí texto",
-        "cvTitle": "Mi Curriculum Vitae",
+        "cvTitle": "Mi resume",
         "cvText": "liga",
         "projectsHeader": "Algunos de mis proyectos"
     },
@@ -42,6 +42,11 @@
         "brainHeader": "La plataforma definitiva para la recuperación de adicciones viene pronto.",
         "brainTitle": "¿Qué es Braintegral?",
         "brainDescription": "Braintegral es una plataforma para ayudar a las personas a recuperarse de sus adicciones.",
-        "brainFooter": "Únete a la lista de espera para recibir actualizaciones sobre el futuro lanzamiento."
+        "brainFooter": "Únete a la lista de espera para recibir actualizaciones sobre el futuro lanzamiento.",
+        "emailPlaceHolder": "Tu email",
+        "emailError": "Email no válido.",
+        "sendMessage": "Únete",
+        "modalTitle": "¡Gracias!",
+        "modalText": "Serás informado sobre futuros avances del proyecto."
     }
 }

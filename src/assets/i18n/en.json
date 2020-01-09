@@ -31,7 +31,7 @@
         "aboutMeHeader": "About me",
         "aboutMeTitle": "Who am I?",
         "aboutMeText": "About me text",
-        "cvTitle": "My Curriculum Vitae",
+        "cvTitle": "My Resume",
         "cvText": "link",
         "projectsHeader": "Some of my projects"
     },
@@ -41,7 +41,12 @@
     "braintegral": {
         "brainHeader": "The definitive platform for addiction recovery is coming.",
         "brainTitle": "What is Braintegral?",
-        "brainDescription": "Braintegral is a platform that focuses in addiction recovery.",
-        "brainFooter": "Join the waiting list to recive updates about the future launch."
+        "brainDescription": "Braintegral is a platform that helps people in their addiction recovery.",
+        "brainFooter": "Join the waiting list to recive updates about the future launch.",
+        "emailPlaceHolder": "Your email",
+        "emailError": "Email not valid.",
+        "sendMessage": "Join",
+        "modalTitle": "Thank you!",
+        "modalText": "You will be noticed about future updates."
     }
 }
