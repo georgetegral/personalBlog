@@ -9,12 +9,12 @@ export const navItems: INavData[] = [
   {
     name: 'Blog',
     url: '/blog',
-    icon: 'cui-bold'
+    icon: 'icon-note'
   },
   {
     name: 'Braintegral',
     url: '/braintegral',
-    icon: 'icon-star'
+    icon: 'cui-bold'
   },
   {
     title: true,
