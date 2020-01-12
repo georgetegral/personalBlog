@@ -64,7 +64,18 @@
         "p2NF2": "Real-time location of user with Google Maps.",
         "p2NF3": "Search to nosql database with different search options.",
         "p2NF4": "Loading animations.",
-        "p2NF5": "Use of Firebase Storage to host all images."
+        "p2NF5": "Use of Firebase Storage to host all images.",
+        "p3Header": "App for Addiction Recovery",
+        "p3Text": "This app allows users to have control over their addiction with therapeutic exercises and a registry of their advance in a calendar.",
+        "p3Note": "",
+        "p3Role": "All the project was made by myself with supervision from a psychologist with an expertise in addiction recovery. The psychologist made sure the exercises in the app were based on real science, while i worked on bringing them to life.",
+        "p3Difficulties": "At the start of the project I had some preceptions of what exercises the app would have, but after my first meeting with the psychologist, I was required to research some theory about therapeutic methods to apply them to the app, because my proposed exercises were not addecuate for addiction recovery.",
+        "p3Solutions": "After I researched the adecuate exercises for addiction recovery, the psychologist helped me to figure out the ones that would have the most impact, and at the end we chose six for the app.",
+        "p3NF1": "Login and Registration with email, Facebook and Google",
+        "p3NF2": "Six therapeutic exercises.",
+        "p3NF3": "Registration of each day's advances and mood.",
+        "p3NF4": "Calendar that shows the mood of each day and if it was a relapse or a clean day.",
+        "p3NF5": "Use of nosql database to store each user's information."
     },
     "blog": {
 

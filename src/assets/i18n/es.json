@@ -64,7 +64,18 @@
         "p2NF2": "Ubicación de tiempo real con Google Maps.",
         "p2NF3": "Búsqueda en bases de datos nosql con diferentes parámetros de búsqueda.",
         "p2NF4": "Animaciones de carga.",
-        "p2NF5": "Uso de Firebase Storage para hostear todas las imágenes."
+        "p2NF5": "Uso de Firebase Storage para hostear todas las imágenes.",
+        "p3Header": "Aplicación para recuperación de adicciones",
+        "p3Text": "Esta aplicación permite a los usuarios tener control sobre sus adicciones mediante ejercicios terapéuticos y un registro de su avance en un calendario.",
+        "p3Note": "",
+        "p3Role": "Todo el proyecto fue realizado por mi con supervisión de una psicóloga experta en recuperación de adicciones. La psicóloga se aseguró que los ejercicios en la aplicación estuvieran basados en ciencia mientras yo trabajaba en hacerlos realidad.",
+        "p3Difficulties": "Al inicio del proyecto tenía ciertos ejercicios en mente para la aplicación, pero después de mi primera junta con la psicóloga, tuve que investigar algo de teoría sobre los métodos terapéuticos para aplicarlos a la aplicación, porque mis ejercicios propuestos no eran adecuados para recuperación de adicciones.",
+        "p3Solutions": "Después de que investigué los ejercicios adecuados para la recuperación de adicciones, la psicóloga me ayudó a elegir los que más impacto tendrían, y al final nos quedamos con seis.",
+        "p3NF1": "Login y registro con email, Facebook y Google.",
+        "p3NF2": "Seis ejercicios terapéuticos.",
+        "p3NF3": "Registro del avance y estado de ánimo de cada día.",
+        "p3NF4": "Calendario que muestra el estado de ánimo de cada día y si fue un día limpio o se recayó.",
+        "p3NF5": "Uso de base de datos nosql para guardar la información de cada usuario."
     },
     "blog": {
 
