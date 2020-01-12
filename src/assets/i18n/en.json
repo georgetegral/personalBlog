@@ -33,7 +33,26 @@
         "aboutMeText": "About me text",
         "cvTitle": "My Resume",
         "cvText": "link",
-        "projectsHeader": "Some of my projects"
+        "projectsHeader": "Some of my projects",
+        "pTitle": "Project Summary",
+        "live": "Live Preview",
+        "code": "Source Code",
+        "tech": "Technologies used",
+        "role": "My Role",
+        "difficulties": "My Difficulties",
+        "solutions": "My Solution",
+        "notableFeatures": "Notable Features",
+        "p1Header": "Administrative Platform for Kindergarden",
+        "p1Text": "Its primary focus is the filling of daily reports for each child that the teacher and the respective parent must do, it also tracks the development of the child with standards from the Mexican Pediatrics Association. The administrator can manage teacher information, groups, child information, and send messages to the parents.",
+        "p1Note": "Note: This is a project currently used by an institution so you won't be able to login.",
+        "p1Role": "Al the project was made by myself, from designing the user interface, the system architecture, and the relational database, to regular meetings with the client to discuss their requirements and the project's development. I worked with the SCRUM methodology with one-week sprints, at the end of each sprint I had a meeting with the client to explain my progress.",
+        "p1Difficulties": "The platform was designed for various types of users, including teachers, parents and administrators, but none of them were tech-savvy, meaning that sometimes they struggled with basic computing tasks, this proved specially difficult with some parents, as some did not even have an email account, smartphone or computer at home.",
+        "p1Solutions": "The solution had various implications, including small user interface redesigns, creating a pdf guide for parents, to putting a tablet at the entrance so that the parent who did not own a smartphone or computer could also use the platform.",
+        "p1NF1": "Login and Registration with email.",
+        "p1NF2": "Sending of unique code for secure registration.",
+        "p1NF3": "Filling and viewing of daily reports.",
+        "p1NF4": "Administration of teachers', parents' and children's information.",
+        "p1NF5": "Tracking of each child's development based on pediatric standards."
     },
     "blog": {
 

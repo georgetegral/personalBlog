@@ -33,7 +33,26 @@
         "aboutMeText": "Sobre mí texto",
         "cvTitle": "Mi resume",
         "cvText": "liga",
-        "projectsHeader": "Algunos de mis proyectos"
+        "projectsHeader": "Algunos de mis proyectos",
+        "pTitle": "Resumen del proyecto",
+        "live": "Proyecto en vivo",
+        "code": "Código Fuente",
+        "tech": "Tecnologias usadas",
+        "role": "Mi rol",
+        "difficulties": "Mis dificultades",
+        "solutions": "Mi solución",
+        "notableFeatures": "Funciones notables",
+        "p1Header": "Plataforma administrativa para guardería",
+        "p1Text": "Su enfoque principal es el llenado de reportes diarios de cada niño que deben de realizar su maestro y su padre, también permite seguir el desarrollo del menor con estándares de la Asociación Mexicana de Pediatría. El administrador puede mandejar información de los maestros, grupos, información de los menores y mandar mensajes a los padres",
+        "p1Note": "Nota: Este proyecto está siendo usado actualmente por una institución, por lo que no podrás iniciar sesión.",
+        "p1Role": "Todo el proyecto fue hecho por mí, desde diseñar la interfaz de usuario, la arquitectura del sistema, y la base de datos relacional, a tener juntas regulares con el cliente para discutir sus requerimientos y el desarrollo de mi proyecto. Trabajé con la metodología SCRUM con sprints de una semana, al final de cada sprint tuve una junta con el cliente para explicar mi progreso.",
+        "p1Difficulties": "La plataforma fue diseñada para varios tipos de usuarios, incluyendo maestros, padres y administradores, pero ninguno de ellos es adepto a la tecnología, esto significa que en veces se les dificultaba realizar tareas básicas de computación, esto fue especialmente difícil con los padres de familia, ya que algunos no tenían correo electrónico, smartphones o computadora en su casa.",
+        "p1Solutions": "La solución tuvo varias implicaciones, desde modificaciones pequeñas a la interfaz de usuario, crear una guía en PDF para los padres de familia, hasta poner una tablet en la entrada para que los padres que no tuvieran un smartphone o una computadora también pudieran usar la plataforma",
+        "p1NF1": "Login y registro con email.",
+        "p1NF2": "Mandar un código único para registro seguro",
+        "p1NF3": "Llenado y vista de reportes diarios.",
+        "p1NF4": "Administración de información de maestros, padres y menores.",
+        "p1NF5": "Supervisión del desarrollo de cada menor basado en estándares pediátricos."
     },
     "blog": {
 

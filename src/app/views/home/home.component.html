@@ -4,7 +4,7 @@
     <div class="row">
 
         <div class="col-sm-6 col-md-8">
-            <div class="card">
+            <div class="card card-accent-primary">
               <div class="card-header">
                 {{ 'home.aboutMeTitle' | translate }}
               </div>
@@ -15,7 +15,7 @@
         </div><!--/.col-->
           
         <div class="col-sm-6 col-md-4">
-            <div class="card">
+            <div class="card card-accent-primary">
               <div class="card-header">
                 {{ 'home.cvTitle' | translate }}
               </div>
@@ -26,18 +26,78 @@
         </div><!--/.col-->
 
     </div><!--/.row-->
-
+    <h2>{{ 'home.projectsHeader' | translate }}</h2>
     <div class="row">
 
-        <div class="col-sm-6 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <i class="fa fa-check"></i>Card with icon
-              </div>
-              <div class="card-body">
-      3          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        <div class="col-sm-6 col-md-12">
+          <div class="card card-accent-primary">
+            <div class="card-header">
+              <strong>{{ 'home.p1Header' | translate }}</strong>
+              <div class="card-header-actions">
+                <img src="https://img.icons8.com/officel/24/000000/php-logo.png">
+                <img src="https://img.icons8.com/ios-filled/24/000000/mysql-logo.png">
+                <img src="https://img.icons8.com/color/24/000000/javascript.png">
+                <img src="https://img.icons8.com/color/24/000000/html-5.png">
+                <img src="https://img.icons8.com/color/24/000000/css3.png">
               </div>
             </div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-5">
+                  <h5>{{ 'home.pTitle' | translate }}</h5>
+                  <p>{{ 'home.p1Text' | translate }}</p>
+                  <img src="../../../assets/img/projects/dyfomoacSC.PNG" style="max-width:100%; max-height:100%;">
+                  <small>{{ 'home.p1Note' | translate }}</small>
+                  <br><br>
+                  <a href="//dyfomoac.com" target="_blank">
+                    <button type="button" class="btn btn-brand btn-sm btn-twitter mr-1" style="margin-bottom: 4px">
+                      <i class="fa fa-rocket"></i>
+                      <span>{{ 'home.live' | translate }}</span>
+                    </button>
+                  </a>
+                  <a href="//github.com/georgetegral/dyfomoac" target="_blank">
+                    <button type="button" class="btn btn-brand btn-sm btn-github mr-1" style="margin-bottom: 4px">
+                      <i class="fa fa-github"></i>
+                      <span>{{ 'home.code' | translate }}</span>
+                    </button>
+                  </a>
+                  <br><br>
+                  <h5>{{ 'home.tech' | translate }}</h5>
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                      <ul>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>JavaScript</li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                      <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>                
+                <div class="col-sm-6 col-md-5">
+                  <h5>{{ 'home.role' | translate }}</h5>
+                  <p>{{ 'home.p1Role' | translate }}</p>     
+                  <h5>{{ 'home.difficulties' | translate }}</h5>
+                  <p>{{ 'home.p1Difficulties' | translate }}</p> 
+                  <h5>{{ 'home.solutions' | translate }}</h5>
+                  <p>{{ 'home.p1Solutions' | translate }}</p> 
+                  <h5>{{ 'home.notableFeatures' | translate }}</h5>
+                  <ul>
+                    <li>{{ 'home.p1NF1' | translate }}</li>
+                    <li>{{ 'home.p1NF2' | translate }}</li>
+                    <li>{{ 'home.p1NF3' | translate }}</li>
+                    <li>{{ 'home.p1NF4' | translate }}</li>
+                    <li>{{ 'home.p1NF5' | translate }}</li>
+                  </ul>            
+                </div>
+              </div>
+            </div>
+          </div>
         </div><!--/.col-->
 
         <div class="col-sm-6 col-md-6">
