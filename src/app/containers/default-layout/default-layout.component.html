@@ -38,7 +38,12 @@
               <p><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</p>
             </div>
           </a>
-          <a href="//facebook.com/georgetegral/" target="_blank" style="color:rgb(66,103,178);text-decoration: none;background-color: none; text-align: center;">
+          <a *ngIf="!checkMobile()" href="//facebook.com/georgetegral/" target="_blank" style="color:rgb(66,103,178);text-decoration: none;background-color: none; text-align: center;">
+            <div class="list-group-item list-group-item-divider">
+              <p><i class="fa fa-facebook-square fa-lg"></i> Facebook</p>
+            </div>
+          </a>
+          <a *ngIf="checkMobile()" href="//mobile.facebook.com/georgetegral/" target="_blank" style="color:rgb(66,103,178);text-decoration: none;background-color: none; text-align: center;">
             <div class="list-group-item list-group-item-divider">
               <p><i class="fa fa-facebook-square fa-lg"></i> Facebook</p>
             </div>
