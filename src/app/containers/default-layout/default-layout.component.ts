@@ -1,14 +1,20 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, NgModule, TemplateRef, ViewChild } from '@angular/core';
 import { navItems } from '../../_nav';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FormControl, Validators } from '@angular/forms';
 import { AppComponent } from '../../app.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
+})
+@NgModule({
+  imports: [
+    BsDropdownModule.forRoot()
+  ]
 })
 export class DefaultLayoutComponent {
   public sidebarMinimized = false;
