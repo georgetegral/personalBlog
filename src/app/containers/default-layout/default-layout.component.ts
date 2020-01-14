@@ -102,6 +102,11 @@ export class DefaultLayoutComponent {
     }
   }
 
+  modalLanguage(language){
+    this.useLanguage(language);
+    this.modalRef.hide();
+  }
+
   goToLink(url: string){
     window.open(url, "_blank");
   }

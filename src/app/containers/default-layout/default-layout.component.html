@@ -126,10 +126,10 @@
     <br><br>
     <div class="row">
 
-      <div *ngIf="getLanguage()!='en'" (click)="useLanguage('en')" class="col-sm-4 col-md-6" style="text-align:center;">
+      <div (click)="modalLanguage('en')" class="col-sm-4 col-md-6" style="text-align:center;">
         <div class="card">
           <div class="card-header">
-            {{ 'onInit.langEN' | translate }}
+            English
           </div>
           <div class="card-body">
             <i class="flag-icon flag-icon-us h1"></i>&nbsp;
@@ -138,22 +138,10 @@
         </div>
       </div><!--/.col-->
 
-      <div *ngIf="getLanguage()=='en'" (click)="useLanguage('en')" class="col-sm-4 col-md-6" style="text-align:center;">
-        <div class="card border-primary">
-          <div class="card-header">
-            {{ 'onInit.langEN' | translate }}
-          </div>
-          <div class="card-body">
-            <i class="flag-icon flag-icon-us h1"></i>&nbsp;
-            <i class="flag-icon flag-icon-gb h1"></i>
-          </div>
-        </div>
-      </div><!--/.col-->
-
-      <div *ngIf="getLanguage()!='es'" (click)="useLanguage('es')" class="col-sm-4 col-md-6" style="text-align:center;">
+      <div (click)="modalLanguage('es')" class="col-sm-4 col-md-6" style="text-align:center;">
         <div class="card">
           <div class="card-header">
-            {{ 'onInit.langES' | translate }}
+            Español
           </div>
           <div class="card-body">
             <i class="flag-icon flag-icon-mx h1"></i>&nbsp;
@@ -161,22 +149,8 @@
           </div>
         </div>
       </div><!--/.col-->
-
-      <div *ngIf="getLanguage()=='es'" (click)="useLanguage('es')" class="col-sm-4 col-md-6" style="text-align:center;">
-        <div class="card border-primary">
-          <div class="card-header">
-            {{ 'onInit.langES' | translate }}
-          </div>
-          <div class="card-body">
-            <i class="flag-icon flag-icon-mx h1"></i>&nbsp;
-            <i class="flag-icon flag-icon-es h1"></i>
-          </div>
-        </div>
-      </div><!--/.col-->
+      
     </div>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Ok</button>
   </div>
 </ng-template>
 
