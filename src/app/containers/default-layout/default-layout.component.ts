@@ -31,12 +31,6 @@ export class DefaultLayoutComponent {
 
   constructor(private afDB: AngularFireDatabase, private appComponent: AppComponent, private modalService: BsModalService){
     this.nameF = new FormControl('',[Validators.required]);
-    /*
-    this.nameF.valueChanges
-      .subscribe(value => {
-        console.log(value);
-      });
-    */
     this.mailF = new FormControl('',[
       Validators.required,
       Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)
