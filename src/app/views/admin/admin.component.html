@@ -1,0 +1,53 @@
+<br>
+<div class="animated fadeIn">
+    <h2>Admin module</h2>
+    <div class="row">
+
+        <div class="col-sm-6 col-md-12">
+            <div class="card">
+              <div class="card-header">
+                {{ 'braintegral.brainTitle' | translate }}
+              </div>
+              <div class="card-body">
+                {{ 'braintegral.brainDescription' | translate }}
+                <br>
+                <a href="//braintegral.com" target="_blank">braintegral.com</a>
+              </div>
+              <div class="card-footer">
+                {{ 'braintegral.brainFooter' | translate }}
+                <form name="contactFormBrain">
+
+                  <div class="form-group" >
+                    <div class="input-group">
+                      <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                      <input [formControl]="mailB" type="email" id="mailB" name="mailB" placeholder="{{ 'braintegral.emailPlaceHolder' | translate }}" class="form-control" required>
+                    </div>
+                    <small style="color:red; text-align:center;" *ngIf="mailB.invalid && mailB.touched">{{ 'braintegral.emailError' | translate }}</small>
+                  </div>
+
+                  <button class="btn btn-sm btn-primary" (click)="sendFormBraintegral(brainConfirmation)" *ngIf="mailB.valid">{{ 'braintegral.sendMessage' | translate }}</button>
+                  <button class="btn btn-sm btn-primary" *ngIf="mailB.invalid" disabled>{{ 'braintegral.sendMessage' | translate }}</button>
+
+                </form>
+              </div>
+            </div>
+        </div><!--/.col-->
+
+    </div><!--/.row-->
+        
+</div>
+
+<ng-template #brainConfirmation>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">{{ 'braintegral.modalTitle' | translate }}</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRefB.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+    {{ 'braintegral.modalText' | translate }}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="modalRefB.hide()">Ok</button>
+  </div>
+</ng-template>
