@@ -51,6 +51,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ModalModule, BsModalRef } from 'ngx-bootstrap';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../app/services/auth.service';
 
 @NgModule({
   imports: [
@@ -90,10 +91,11 @@ import { CookieService } from 'ngx-cookie-service';
   ],
   providers: [{
     provide: LocationStrategy,
-    useClass: HashLocationStrategy,  
+    useClass: HashLocationStrategy,
   },
   BsModalRef,
-  CookieService
+  CookieService,
+  AuthService
   ],
   bootstrap: [ AppComponent ]
 })

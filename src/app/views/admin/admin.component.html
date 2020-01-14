@@ -1,39 +1,61 @@
 <br>
 <div class="animated fadeIn">
-    <h2>Admin module</h2>
-    <div class="row">
-
-        <div class="col-sm-6 col-md-12">
+    <h2>Módulo de administrador</h2>
+    <div class="row justify-content-center" *ngIf="!loggedIn">
+        <div class="col-sm-6 col-md-6">
             <div class="card">
               <div class="card-header">
-                {{ 'braintegral.brainTitle' | translate }}
+                Inicia sesión
               </div>
               <div class="card-body">
-                {{ 'braintegral.brainDescription' | translate }}
-                <br>
-                <a href="//braintegral.com" target="_blank">braintegral.com</a>
-              </div>
-              <div class="card-footer">
-                {{ 'braintegral.brainFooter' | translate }}
-                <form name="contactFormBrain">
-
-                  <div class="form-group" >
-                    <div class="input-group">
-                      <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
-                      <input [formControl]="mailB" type="email" id="mailB" name="mailB" placeholder="{{ 'braintegral.emailPlaceHolder' | translate }}" class="form-control" required>
-                    </div>
-                    <small style="color:red; text-align:center;" *ngIf="mailB.invalid && mailB.touched">{{ 'braintegral.emailError' | translate }}</small>
-                  </div>
-
-                  <button class="btn btn-sm btn-primary" (click)="sendFormBraintegral(brainConfirmation)" *ngIf="mailB.valid">{{ 'braintegral.sendMessage' | translate }}</button>
-                  <button class="btn btn-sm btn-primary" *ngIf="mailB.invalid" disabled>{{ 'braintegral.sendMessage' | translate }}</button>
-
+                <form name="contactForm">
+                  <input [formControl]="passAdmin" type="password" id="passAdmin" name="passAdmin" class="form-control" required>
+                  <br>
+                  <button class="btn btn-sm btn-primary" *ngIf="passAdmin.valid" (click)="login()" >Iniciar sesión</button>
+                  <button class="btn btn-sm btn-primary" *ngIf="passAdmin.invalid" disabled>Iniciar sesión</button>
                 </form>
               </div>
             </div>
         </div><!--/.col-->
-
     </div><!--/.row-->
+
+    <div class="row justify-content-center" *ngIf="loggedIn">
+      <div class="col-sm-6 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              Cierra sesión
+            </div>
+            <div class="card-body">
+              <button class="btn btn-sm btn-primary" (click)="logout()" >Cerrar sesión</button>
+            </div>
+          </div>
+        </div><!--/.col-->
+    </div><!--/.row-->
+
+  <h2 *ngIf="loggedIn">Sesión iniciada</h2>
+  <h2 *ngIf="!loggedIn">Sesión cerrada</h2>
+
+  <div class="row justify-content-center" *ngIf="loggedIn">
+    <div class="col-sm-6 col-md-8">
+        <div class="card">
+          <div class="card-header">
+            Mensajes:
+          </div>
+          <div class="card-body">
+            
+            <div class="card">
+              <div class="card-header">
+                Mensajes:
+              </div>
+              <div class="card-body">
+                
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!--/.col-->
+  </div><!--/.row-->
         
 </div>
 
