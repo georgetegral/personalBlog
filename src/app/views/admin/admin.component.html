@@ -32,28 +32,28 @@
         </div><!--/.col-->
     </div><!--/.row-->
 
-  <h2 *ngIf="loggedIn">Sesión iniciada</h2>
+  <h2 *ngIf="loggedIn">Mensajes</h2>
   <h2 *ngIf="!loggedIn">Sesión cerrada</h2>
 
   <div class="row justify-content-center" *ngIf="loggedIn">
     <div class="col-sm-6 col-md-8">
+        
+      <ng-container *ngFor="let message of messages">
         <div class="card">
           <div class="card-header">
-            Mensajes:
+            <strong>{{message.name}}</strong> - <a href="mailto:{{message.email}}">{{message.email}}</a>
+            <div class="card-header-actions">
+              Fecha: {{message.date | date:'short'}}
+            </div>
           </div>
           <div class="card-body">
-            
-            <div class="card">
-              <div class="card-header">
-                Mensajes:
-              </div>
-              <div class="card-body">
-                
-              </div>
-            </div>
-
+            <h4>{{message.subject}}</h4>
+            {{message.message}}
+            <p>{{message.key}}</p>
           </div>
         </div>
+      </ng-container>
+
       </div><!--/.col-->
   </div><!--/.row-->
         

@@ -52,6 +52,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ModalModule, BsModalRef } from 'ngx-bootstrap';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../app/services/auth.service';
+import { MessagesService } from '../app/services/messages.service';
 
 @NgModule({
   imports: [
@@ -95,7 +96,8 @@ import { AuthService } from '../app/services/auth.service';
   },
   BsModalRef,
   CookieService,
-  AuthService
+  AuthService,
+  MessagesService
   ],
   bootstrap: [ AppComponent ]
 })
