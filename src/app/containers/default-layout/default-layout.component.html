@@ -8,47 +8,6 @@
   [mobileAsideMenuToggler]="false">
   <ul class="nav navbar-nav ml-auto">
     
-    <li class="nav-item dropdown" dropdown placement="bottom left">
-      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
-        <i class="fa fa-users fa-lg"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
-        <div class="list-group list-group-accent">
-          <div class="list-group-item bg-light text-center font-weight-bold text-muted text-uppercase small">{{ 'asidebar.socialNetworks' | translate }}</div>
-          <a href="//github.com/georgetegral" target="_blank" style="color:black;text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-github fa-lg"></i> Github</p>
-            </div>
-          </a>
-          <a href="//linkedin.com/in/georgetegral/" target="_blank" style="color:rgb(40,103,178);text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</p>
-            </div>
-          </a>
-          <a *ngIf="!checkMobile()" href="//facebook.com/georgetegral/" target="_blank" style="color:rgb(66,103,178);text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-facebook-square fa-lg"></i> Facebook</p>
-            </div>
-          </a>
-          <a *ngIf="checkMobile()" href="//mobile.facebook.com/georgetegral/" target="_blank" style="color:rgb(66,103,178);text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-facebook-square fa-lg"></i> Facebook</p>
-            </div>
-          </a>
-          <a href="//twitter.com/georgetegral" target="_blank" style="color:rgb(29,161,242);text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-twitter fa-lg"></i> Twitter</p>
-            </div>
-          </a>
-          <a href="//instagram.com/georgetegral/" target="_blank" style="color:rgb(225,48,108);text-decoration: none;background-color: none; text-align: center;">
-            <div class="list-group-item list-group-item-divider">
-              <p><i class="fa fa-instagram fa-lg"></i> Instagram</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </li>
-
     <li class="nav-item dropdown" dropdown [autoClose]="autoClose">
       <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true" dropdownToggle (click)="false">
         <i class="fa fa-envelope fa-lg"></i>
