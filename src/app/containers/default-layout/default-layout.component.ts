@@ -59,13 +59,11 @@ export class DefaultLayoutComponent {
 
   sendForm(template: TemplateRef<any>){
     var id = Date.now();
-    var date = new Date();
-    var humanDate = date.toLocaleString();
     this.afDB.database.ref('messages/'+id+'/name').set(this.nameF.value);
     this.afDB.database.ref('messages/'+id+'/email').set(this.mailF.value);
     this.afDB.database.ref('messages/'+id+'/subject').set(this.subjF.value);
     this.afDB.database.ref('messages/'+id+'/message').set(this.messF.value);
-    this.afDB.database.ref('messages/'+id+'/date').set(humanDate);
+    this.afDB.database.ref('messages/'+id+'/date').set(id);
     this.modalRef = this.modalService.show(template,{ backdrop: 'static', keyboard: false });
     this.nameF.setValue("");  this.nameF.reset();
     this.mailF.setValue("");  this.mailF.reset();

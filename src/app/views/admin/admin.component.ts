@@ -55,7 +55,6 @@ export class AdminComponent {
       
   }
 
-  
   login(){
     this.authService.login(this.passAdmin.value);
     this.passAdmin.reset();
