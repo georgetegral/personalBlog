@@ -5,7 +5,8 @@ export const navItems: INavData[] = [
     name: 'Home',
     url: '/home',
     icon: 'icon-home'
-  },
+  }
+  /*,
   {
     name: 'Blog',
     url: '/blog',
@@ -16,4 +17,5 @@ export const navItems: INavData[] = [
     url: '/braintegral',
     icon: 'cui-bold'
   }
+  */
 ];
